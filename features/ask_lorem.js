@@ -37,7 +37,7 @@ const isLoremCommand = (msgSplitted) => {
   return value;
 };
 
-const getParams = (msg) => {
+const getParams = () => {
   let value = 1;
 
   if (paramsString) {
@@ -52,7 +52,7 @@ module.exports = (controller) => {
     async (message) => message.text && isLoremCommand(message.text.split('!')),
     ['message', 'direct_message'],
     async (bot, message) => {
-      value = getParams(message.text);
+      value = getParams();
 
       let arr;
       let res = {
