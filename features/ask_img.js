@@ -55,7 +55,7 @@ module.exports = (controller) => {
       axios
         .get(url)
         .then(async (response) => {
-          success = true;
+          //success = true;
           await bot.startPrivateConversation(message.user);
           await bot.say(response.request._redirectable._options.href);
         })
