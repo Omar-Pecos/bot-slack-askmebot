@@ -1,8 +1,9 @@
 const axios = require('axios').default;
 
-const baseURL = (process.env.NODE_ENV = 'development'
-  ? process.env.API_APM_URL_LOCAL
-  : process.env.API_APM_URL_PROD);
+const baseURL =
+  process.env.NODE_ENV === 'development'
+    ? process.env.API_APM_URL_LOCAL
+    : process.env.API_APM_URL_PROD;
 const URL = baseURL + '/api/v1/apm';
 
 let param = '';
