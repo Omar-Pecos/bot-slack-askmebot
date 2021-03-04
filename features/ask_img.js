@@ -44,7 +44,7 @@ module.exports = (controller) => {
 
       //only a search term - random?water
       if (values.search) {
-        url += values.search;
+        url += '?' + values.search;
       }
 
       //full 3 terms search - .com/widthxheight/?water
